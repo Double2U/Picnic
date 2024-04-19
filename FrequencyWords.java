@@ -7,8 +7,10 @@ public class FrequencyWords {
         this.map = new HashMap<>();
     }
 
-    public HashMap<String, Integer> getCountOfUniqueWord(String[] words){
+    public HashMap<String, Integer> getCountOfUniqueWord(){
         int count = 1;
+        Reader reader = new Reader("input.txt");
+        String[] words = reader.getWords();
         for(String word : words){
             map.put(word, count);
              if(map.containsKey(word)){

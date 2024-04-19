@@ -8,19 +8,25 @@ public class LongWord {
     private List<String> list;
     private HashSet<String> set;
 
-    public LongWord(String[] words){
+    public LongWord(){
         this.length = 0;
-        this.list = Arrays.asList(words);
-        this.set = new HashSet<>(this.list);
+        this.list = null;
+        this.set = null;
     }
 
-    public int getLength() {
+    public String getLongWord() {
+        Reader reader = new Reader("input.txt");
+        String[] words = reader.getWords();
+        list = Arrays.asList(words);
+        set = new HashSet<>(list);
+        String longWord = null;
         for (String word : set){
             if (length < word.length()){
+                longWord = word;
                 length = word.length();
             }         
         }
-        return length;
+        return longWord;
     }
 
 
