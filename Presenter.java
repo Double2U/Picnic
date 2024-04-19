@@ -7,8 +7,8 @@ public class Presenter {
 
     public void run(){
 
-        System.out.printf("Количество слов: %s", controller.getCountWords());
-        System.out.printf("Cамое длинное слово: %s", controller.getLongWord());
+        System.out.printf("Количество слов: %s\n", controller.getCountWords());
+        System.out.printf("Cамое длинное слово: %s\n", controller.getLongWord());
         System.out.printf("Частота слов: %s", controller.getFrequencyWord().toString());
         
     }
