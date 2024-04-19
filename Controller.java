@@ -1,11 +1,11 @@
 import java.util.HashMap;
 
-public class Conroller{
+public class Controller{
     private CounterWords cw;
     private FrequencyWords fw;
     private LongWord lw;
 
-    public Conroller(){
+    public Controller(){
         this.cw = new CounterWords();
         this.fw = new FrequencyWords();
         this.lw = new LongWord();
